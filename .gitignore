@@ -1,0 +1,50 @@
+### IntelliJ IDEA ###
+.settings
+.project
+.classpath
+**/bin
+*.iml
+*.ipr
+*.iws
+**/.idea
+
+### Output ###
+/bin/
+/target/
+/out/
+*.allure/
+*allure-results/
+
+### Compiled class file ###
+*.class
+
+### Log file ###
+*.log
+
+### BlueJ files ###
+*.ctxt
+
+### Mobile Tools for Java (J2ME) ###
+.mtj.tmp/
+
+### Package Files ###
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Gradle ###
+.gradle
+/build/
+/gradle/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
