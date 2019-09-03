@@ -1,11 +1,13 @@
 plugins {
     id 'java'
+    id 'idea'
 }
 
 group 'com.lgi'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.10
+sourceCompatibility = '10'
+targetCompatibility = '10'
 
 repositories {
     mavenCentral()
@@ -29,4 +31,6 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
+    systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
 }
