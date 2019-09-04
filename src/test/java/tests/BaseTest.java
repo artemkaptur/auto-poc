@@ -26,10 +26,10 @@ public abstract class BaseTest {
             .log(ALL).build();
     // @Value("${success.status.code}")
     protected int successStatusCode = 200;
-    @Value("${server.error.status.code}")
-    protected int serverErrorStatusCode;
-    @Value("${server.error.message}")
-    protected String serverErrorMessage;
+    // @Value("${server.error.status.code}")
+    protected int serverErrorStatusCode = 500;
+    // @Value("${server.error.message}")
+    protected String serverErrorMessage = "something bad happened";
     // @Value("${application.json.contenttype}")
     protected String applicationJsonContentType = "application/json";
     // @Value("${success.max.responsetime}")
