@@ -10,10 +10,14 @@ sourceCompatibility = '10'
 targetCompatibility = '10'
 
 repositories {
-    mavenCentral()
+    jcenter()
+    mavenLocal()
+    maven { url "http://dl.bintray.com/epam/reportportal" }
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
+    implementation 'com.epam.reportportal:agent-java-junit5:4.0.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
