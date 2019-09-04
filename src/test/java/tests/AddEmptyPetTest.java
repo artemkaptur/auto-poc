@@ -11,12 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AddEmptyPetTest extends BaseTest {
 
-    // @Autowired
-    private Pet emptyPet = new Pet();
+    @Autowired
+    private Pet emptyPet;
 
     @Test
     void addEmptyPetTest() {
-
         Response addNewPetToTheStoreResponse = addNewPetToTheStore(emptyPet);
         int statusCode = addNewPetToTheStoreResponse.statusCode();
         Pet addedPet = addNewPetToTheStoreResponse.as(Pet.class);

@@ -11,7 +11,6 @@ class AddPetWithoutBodyTest extends BaseTest {
 
     @Test
     void addPetWithoutBodyTest() {
-
         Response addNewPetToTheStoreResponse = addNewPetToTheStore();
         int statusCode = addNewPetToTheStoreResponse.statusCode();
         String responseMessage = addNewPetToTheStoreResponse.body().jsonPath().getString("message");
