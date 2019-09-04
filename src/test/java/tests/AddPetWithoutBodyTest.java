@@ -7,10 +7,10 @@ import static constants.AssertionErrorMessages.*;
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AddPetWithoutBodyTest extends BaseTest {
+class AddPetWithoutBodyTest extends BaseTest {
 
     @Test
-    public void addPetWithoutBodyTest() {
+    void addPetWithoutBodyTest() {
 
         Response addNewPetToTheStoreResponse = addNewPetToTheStore();
         int statusCode = addNewPetToTheStoreResponse.statusCode();

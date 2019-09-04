@@ -9,13 +9,13 @@ import static constants.AssertionErrorMessages.*;
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AddEmptyPetTest extends BaseTest {
+class AddEmptyPetTest extends BaseTest {
 
     // @Autowired
     private Pet emptyPet = new Pet();
 
     @Test
-    public void addEmptyPetTest() {
+    void addEmptyPetTest() {
 
         Response addNewPetToTheStoreResponse = addNewPetToTheStore(emptyPet);
         int statusCode = addNewPetToTheStoreResponse.statusCode();

@@ -17,7 +17,7 @@ import static model.PetStatus.VACCINATED;
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AddPetWithInvalidBodyTest extends BaseTest {
+class AddPetWithInvalidBodyTest extends BaseTest {
 
     // @Autowired
     private Pet petToBeAdded = Pet.builder()
@@ -41,7 +41,7 @@ public class AddPetWithInvalidBodyTest extends BaseTest {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    public void addPetWithInvalidBodyTest() throws JsonProcessingException {
+    void addPetWithInvalidBodyTest() throws JsonProcessingException {
 
         int randomNumberForSpoilRequestBody = 13;
         Response addNewPetToTheStoreResponse = addNewPetToTheStore(objectMapper.writeValueAsString(petToBeAdded)
