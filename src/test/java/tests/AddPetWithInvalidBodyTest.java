@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
 import model.Pet;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,6 +20,7 @@ class AddPetWithInvalidBodyTest extends BaseTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @Tag("negative")
     void addPetWithInvalidBodyTest() throws JsonProcessingException {
         int randomNumberForSpoilRequestBody = 13;
         Response addNewPetToTheStoreResponse = addNewPetToTheStore(objectMapper.writeValueAsString(petToBeAdded)

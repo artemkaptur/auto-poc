@@ -2,6 +2,7 @@ package tests;
 
 import io.restassured.response.Response;
 import model.Pet;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,6 +16,7 @@ class AddNewPetToTheStoreTest extends BaseTest {
     private Pet petToBeAdded;
 
     @Test
+    @Tag("positive")
     void addNewPetToTheStoreTest() {
         Response addNewPetToTheStoreResponse = addNewPetToTheStore(petToBeAdded);
         int statusCode = addNewPetToTheStoreResponse.statusCode();

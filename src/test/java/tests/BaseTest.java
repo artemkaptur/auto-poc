@@ -11,7 +11,7 @@ import spring.AppConfig;
 import static io.restassured.RestAssured.given;
 
 @SpringJUnitConfig(AppConfig.class)
-abstract class BaseTest {
+abstract class BaseTest  {
 
     @Autowired
     protected RequestSpecification requestSpecification;

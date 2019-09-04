@@ -1,6 +1,7 @@
 package tests;
 
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static constants.AssertionErrorMessages.*;
@@ -10,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AddPetWithoutBodyTest extends BaseTest {
 
     @Test
+    @Tag("negative")
     void addPetWithoutBodyTest() {
         Response addNewPetToTheStoreResponse = addNewPetToTheStore();
         int statusCode = addNewPetToTheStoreResponse.statusCode();
